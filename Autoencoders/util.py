@@ -2,6 +2,9 @@ from variables import *
 import numpy as np
 import pandas as pd
 
+def error_rate(P, T):
+    return np.mean(P == T)
+    
 def read_csv_files(csv_file):
         data = pd.read_csv(csv_file)
         data = data.dropna(axis = 0, how ='any')
